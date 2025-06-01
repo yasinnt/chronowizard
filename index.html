@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chronowizard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>  
+
+<!-- This is Alert-->
+  <div class="custom-alert" id="alertBox">
+        <div class="alert-content">
+             <img src="imgs/ibtn.webp" alt="" width="24.36" class="alert-icon"> 
+            <p class="alert-text">Name please!☺️</p>
+        </div>
+    </div>
+
+    <div class="custom-alert" id="alertBox2">
+      <div class="alert-content">
+           <img src="imgs/ibtn.webp" alt="" width="24.36" class="alert-icon"> 
+          <p class="alert-text">Select gender first!😌</p>
+      </div>
+  </div>
+
+  <div class="custom-alert" id="alertBox3">
+      <div class="alert-content">
+           <img src="imgs/ibtn.webp" alt="" width="24.36" class="alert-icon"> 
+          <p class="alert-text">Oi! Why you runnin😂’? fill it</p>
+      </div>
+  </div>
+
+  <div class="custom-alert" id="alertBox4">
+      <div class="alert-content">
+           <img src="imgs/see_no_evil.png" alt="" width="24.36" class="alert-icon"> 
+          <p class="alert-text">Thanks! for ur feedback.❤️</p>
+      </div>
+  </div>
+
+<audio src="imgs/mixkit-long-pop-2358.wav" controls style="display: none;" id="alertdim"></audio>
+     
+    <!-- This is Home Page-->
+     <section id="home-section" class="page active">
+    <div id="home-page" >
+        <div class="heading">
+        <h2 id="main-text">Welcome to <span class="highlight">ChronoWizard.!</span></h2>
+        <p id="wlcm">Welcome, human. I will now guess your age. Not because I care — <br>just because I can.</p>
+    </div>
+        <div class="charecters">
+        <img src="imgs/Group 1.png" alt="tt" id="lol" width="300" loading="lazy">
+        
+        <button id="mainbtn" onclick="showSection('info-section')"><img src="imgs/sparklecustom.png" alt="Button icon" id="sparkle">Start now</button>
+    </div>
+
+     <!-- This is user stats-->
+    <div class="stats">
+      <p id="stats-p"><span class="span-stats" id="totalUsers">0</span>tried😌 ,<span class="span-stats" id="totalLikes">0</span> crushed it😍️ ,<br><span class="span-stats" id="totalDislikes">0</span> were busy daydreaming. ☁️😴</p>
+    </div>
+   
+   
+    <div class="line-box">
+    <div class="horizontal-line"></div>
+</div>
+<div class="madebox">
+    <h2 id="madeby"> made by <a href="https://www.instagram.com/asn.mhm/
+        "><span class="me">yasin.</span></a></h2>
+    </div>
+</div> 
+
+</section>
+
+    <!-- This is user intro page-->
+
+    <section id="info-section" class="page">
+    <div id="user-info-page" >
+  <div class="logoBox">
+  </div>
+  <div class="remainder">
+  </div>
+  
+    <div class="nameBox">
+      <div id="monkey1">
+        <img src="imgs/see_no_evil.png" alt="" width="90" loading="lazy" id="monkeyevil">
+      </div>
+      <div class="textBox">
+        <h3 id="mainText">What i call you!</h3>
+      </div>
+      <div class="inpBtnBox" id="inputBtn">
+        <input type="text" id="nameIn" required >
+        <button id="nxtBtn" class="nextBtn" onclick="pickUsername()">Next</button>
+      </div>
+      </div>
+
+      </div>
+      </section>
+
+           <!-- This is  Gender Area-->
+            <section id="gender-section" class="page">
+      <div id="gender-page" >
+      <div id="monkey2">
+              <img src="imgs/hear_no_evil (1).png" alt="gendermonkey" width="90" loading="lazy" id="genmonkey">
+       </div>
+       <div class="textBox">
+        <h3 id="genderAsk">King <span style='color:#4D59FA'>or</span> Queen!</h3>
+       </div>
+      <div class="genderBox" id="genderId">
+        <div class="genderControl">
+        <button class="gender" onclick="pickGender('male')">
+          <img src="imgs/prince.png" alt="prince" width="51.17" class="imgGen">
+        </button>
+         <button onclick="pickGender('female') " class="gender">
+          <img src="imgs/princess.png" alt="princess" width="51.17" class="imgGen">
+        </button>
+        </div>
+        <button id="genderOut" onclick="verifyGender()">Next</button>
+      </div>
+      </div>
+    </section>
+    
+
+
+
+     <!-- This is  Question Page-->
+      <section id="question-section" class="page">
+       
+       
+       
+<div id="question-page">
+     
+     <div id="calcu">
+    <button id="calcualtor-suggestion" onclick="window.open('https://www.google.com/search?q=calculator')" > 
+   <img src="imgs/calcu.png" alt="icon" id="calculator" width="30" loading="lazy">
+      </button>  </div>
+   
+  
+    <div class="emojiBox">
+    <img src="imgs/male_mage (1).png" alt="" id="emojiControl" width="130"  loading="lazy
+    " > 
+    </div>
+
+    <div class="question-box">
+      <h3 id="questionText"></h3>
+    </div>
+
+    <button id="next-question" onclick="nextQuestion()">Next</button>
+    
+</div>
+</section>
+
+<!-- Final Answer Input Page-->
+<section id="final-section" class="page">
+<div id="final-input-page" >
+
+<div class="finalEmoji">
+<img src="imgs/male_mage (1).png" alt="" width="130px" height="130px"> 
+</div>
+<div class="final-input-text">
+<h3 id="finalText">Drop the final <br>number...<br>I’ll do the Magic!</h3>
+</div>
+<div class="final-inp-btn">
+<input type="number" name="" placeholder="Enter the 4 digit no..." id="finalInput" min="1000" max="9999" oninput="this.value = this.value.slice(0, 4)" >
+<button id="boom" onclick="thinkAge()"><img src="imgs/sparklecustom.png" alt="boomm" width="20px" id="aistar">Boom!</button>
+</div>
+</div>
+ </section>
+<!-- Loading Page-->
+<section id="loading-section" class="page">
+<div id="loading-page" >
+    <div class="balloonArt">
+        <img src="imgs/balloon3d.webp" alt="" width="170" loading="lazy" id="baloon">
+    </div>
+    <div class="loading-box">
+        <div class="loading-text">
+       <h3 id="think">Thinking...</h3>
+        </div>
+        <div class="load-bar-back">
+            <div class="load-bar-in"></div>
+        </div>
+
+        <div class="percentage-text">
+            <h3 id="percentage">0%</h3>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Display Result Page-->
+<section id="display-section" class="page" >
+<div id="display-page" >
+  <div class="display-result">
+
+    <div class="party-image">
+      <img src="imgs/popper.png" alt="popper" width="120" loading="lazy">
+    </div>
+      <div class="rows">
+    <div class="name-row">
+      <div class="emoji-icon">
+        <img id="final-gender" alt="prince/princess" src="imgs/" width="31" loading="lazy">    <!-- <<<Final Gender Emoji-->
+      </div>
+      <h3 id="user-id-final"></h3>    
+    </div>
+
+    <div class="age-row" >
+      <div class="age-icon">
+        <h3 id="age-final"></h3>               <!-- <<<Final Age Result-->
+      </div>
+      <h3 id="years-old">years old</h3>
+    </div>
+
+    <div class="birth-row" >
+      <h3 id="born-on">2005,May</h3>             <!-- <<<Final Birth Month & Year-->     
+    </div>
+</div>
+
+
+    <div class="feedback-section">
+      <div class="feedback-head">
+        <h3 id="exactly">Exactly.! <img src="imgs/see_no_evil.png" alt="icon-monkey" id="monkey-fb" width="20" loading="lazy">  </h3>
+      </div>
+      <div class="give-fb">
+        <h3 id="feedback-text"></h3>Give ur feedback!</div>
+    
+
+    <div class="feedback-icons">
+      
+  <button class="likeBtn" id="like-Btn" onclick="showThank('alertBox4')">
+    <img src="imgs/up.png" alt="like" id="like" class="fb-icon" width="25.7px">
+  </button>
+
+  <button class="likeBtn" id="unlike-Btn">
+    <img src="imgs/down.png" alt="dislike" id="dislike" class="fb-icon" width="25.7">
+  </button>
+</div>
+  </div>
+
+  
+
+  </div>
+  
+</div>
+    
+</section>
+
+
+
+
+<script src="app.js" defer>
+    
+    document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+</script>
+    
+</body>
+</html>
