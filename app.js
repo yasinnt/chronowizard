@@ -116,13 +116,7 @@
  
  
  
- 
- document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('keydown', e => {
-  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-    e.preventDefault();
-  }
-});
+
 
 
 
@@ -628,9 +622,9 @@ else {
     document.getElementById('born-on').innerHTML = birthYear + ", " + monthName;
     
     if (genid === "male") {
-        document.getElementById('final-gender').src = "prince.png";
+        document.getElementById('final-gender').src = "imgs/prince.png";
     } else {
-        document.getElementById('final-gender').src = "princess.png";
+        document.getElementById('final-gender').src = "imgs/princess.png";
     }
 }
 
